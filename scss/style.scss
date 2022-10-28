@@ -1,0 +1,22 @@
+// Null styles ========================
+@import "_null.scss";
+
+// Fonts ==============================
+@font-face {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../src/fonts/Gilroy-Regular.woff2);
+}
+@font-face {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../src/fonts/Gilroy-Bold.woff2);
+}
+
+// Main styles ========================
+body {
+    font-family: Gilroy;
+    font-size: 10px;
+}
