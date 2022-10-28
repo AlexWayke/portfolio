@@ -69,6 +69,11 @@ input {
   font-weight: 700;
   src: url(../src/fonts/Gilroy-Bold.woff2);
 }
+h1 {
+  font-size: 3.28vw;
+  font-weight: 700;
+}
+
 html, body {
   width: 100%;
 }
@@ -79,9 +84,14 @@ body {
   color: #070707;
 }
 
+main {
+  width: 100%;
+}
+
 .container {
   width: 65vw;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .wrapper {
@@ -107,4 +117,77 @@ body {
   font-size: 1.25vw;
   font-weight: 700;
   line-height: 1.5em;
+  color: #828282;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.header-menu--li:hover {
+  opacity: 0.8;
+}
+.header-menu--li.active {
+  color: #070707;
+}
+
+.mainscreen {
+  height: 100vh;
+  padding-top: 6.3vw;
+  box-sizing: border-box;
+}
+.mainscreen-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.mainscreen-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 2.77vw 0 2vw;
+}
+.mainscreen-info--name {
+  flex: 1 1 auto;
+  line-height: 1.1em;
+}
+.mainscreen-info--bio {
+  flex: 1 1 auto;
+  font-size: 1.25vw;
+  line-height: 1.5em;
+}
+.mainscreen-info--language {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.25vw;
+  font-weight: 700;
+}
+.mainscreen-info--container {
+  rotate: -90deg;
+  padding-top: 50px;
+}
+.mainscreen-info--button {
+  color: #828282;
+  padding: 0 5px;
+}
+.mainscreen-info--button:not(:last-child) {
+  border-right: 2px solid #070707;
+}
+.mainscreen-info--button.active {
+  color: #070707;
+}
+.mainscreen-photo {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.mainscreen-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
