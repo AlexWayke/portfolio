@@ -16,7 +16,42 @@
 }
 
 // Main styles ========================
+html, body {
+    width: 100%;
+}
 body {
     font-family: Gilroy;
     font-size: 10px;
+    color: #070707;
+
+}
+.container {
+    width: 65vw;
+    margin: 0 auto;
+}
+.wrapper {
+    position: relative;
+}
+
+// Header =============================
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+
+    &-wrapper {
+        padding: 2.21vw 0;
+        border-bottom: 0.07vw #828282 solid;
+    }
+    &-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--li {
+            font-size: 1.25vw;
+            font-weight: 700;
+            line-height: 1.5em;
+        }
+    }
 }
