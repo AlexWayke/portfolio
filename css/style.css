@@ -73,11 +73,21 @@ h1 {
   font-size: 3.28vw;
   font-weight: 700;
 }
+@media (max-width: 1444px) {
+  h1 {
+    font-size: 47px;
+  }
+}
 
 h2 {
   font-size: 2.35vw;
   font-weight: 700;
   line-height: 1.2em;
+}
+@media (max-width: 1444px) {
+  h2 {
+    font-size: 34px;
+  }
 }
 
 html, body {
@@ -86,7 +96,7 @@ html, body {
 
 body {
   font-family: Gilroy;
-  font-size: 10px;
+  font-size: 18px;
   color: #070707;
 }
 
@@ -134,6 +144,19 @@ main {
 .header-menu--li.active {
   color: #070707;
 }
+@media (max-width: 1444px) {
+  .header-menu--li {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1020px) {
+  .header {
+    position: fixed;
+    right: -100%;
+    height: 100vh;
+    z-index: 10;
+  }
+}
 
 .mainscreen {
   height: 100vh;
@@ -150,6 +173,7 @@ main {
   flex-direction: row;
   align-items: flex-end;
   padding: 2.77vw 0 2vw;
+  font-size: 1.25vw;
 }
 .mainscreen-info--name {
   flex: 1 1 auto;
@@ -157,7 +181,6 @@ main {
 }
 .mainscreen-info--bio {
   flex: 1 1 auto;
-  font-size: 1.25vw;
   line-height: 1.5em;
 }
 .mainscreen-info--language {
@@ -165,7 +188,6 @@ main {
   flex: 1 1 auto;
   flex-direction: column;
   align-items: flex-end;
-  font-size: 1.25vw;
   font-weight: 700;
 }
 .mainscreen-info--container {
@@ -198,6 +220,11 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 1444px) {
+  .mainscreen-info {
+    font-size: 1em;
+  }
+}
 .about {
   background-color: #F6F6F6;
   padding: 110px 0;
@@ -217,6 +244,11 @@ main {
   font-size: 1.25vw;
   line-height: 1.2em;
   margin-bottom: 30px;
+}
+@media (max-width: 1444px) {
+  .about-paragraph {
+    font-size: 1em;
+  }
 }
 
 .skills {
@@ -288,6 +320,11 @@ main {
   background: no-repeat center url(/src/skills/icon/star-fill.svg);
   background-size: contain;
 }
+@media (max-width: 1444px) {
+  .skills-item--title {
+    font-size: 0.78em;
+  }
+}
 
 .portfolio {
   padding: 110px 0 90px;
@@ -330,6 +367,11 @@ main {
 }
 .portfolio-link:hover {
   opacity: 0.8;
+}
+@media (max-width: 1444px) {
+  .portfolio-link {
+    font-size: 1em;
+  }
 }
 
 .footer {
@@ -388,4 +430,17 @@ main {
 }
 .footer-social--img:hover {
   height: 110%;
+}
+.footer-subtitle {
+  font-size: 1vw;
+  line-height: 1.2em;
+  color: #828282;
+}
+@media (max-width: 1444px) {
+  .footer-text, .footer-btn {
+    font-size: 1em;
+  }
+  .footer-subtitle {
+    font-size: 0.78em;
+  }
 }
