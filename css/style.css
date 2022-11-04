@@ -126,11 +126,12 @@ main {
 
 .header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: right 1s ease;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
 }
 .header-wrapper {
   padding: 2.21vw 0;
@@ -168,9 +169,7 @@ main {
 @media (max-width: 1020px) {
   .header {
     position: fixed;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 150px;
     height: 100vh;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.8);
@@ -190,8 +189,11 @@ main {
   .header-menu--li {
     padding: 10px 20px;
   }
+  .header-menu--li:hover {
+    opacity: 1;
+  }
   .header-hide {
-    right: -100%;
+    right: -160px;
   }
 }
 
@@ -639,6 +641,9 @@ main {
   }
   .footer-social--img {
     width: 35px;
+  }
+  .footer-social--img:hover {
+    height: 100%;
   }
 }
 @media (max-width: 520px) {
