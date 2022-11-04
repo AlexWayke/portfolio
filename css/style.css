@@ -78,6 +78,11 @@ h1 {
     font-size: 47px;
   }
 }
+@media (max-width: 720px) {
+  h1 {
+    font-size: 34px;
+  }
+}
 
 h2 {
   font-size: 2.35vw;
@@ -109,10 +114,9 @@ main {
   margin: 0 auto;
   padding: 0 15px;
 }
-@media (max-width: 1019px) {
+@media (max-width: 1020px) {
   .container {
     max-width: 1000px;
-    padding: 0 30px;
   }
 }
 
@@ -167,22 +171,21 @@ main {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-top: 20px;
-    border: #070707 1px solid;
-    border-right: none;
-    border-radius: 20px 0 0 20px;
+    height: 100vh;
     z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: -15px 0 8px 8px rgba(255, 255, 255, 0.8);
   }
   .header-wrapper {
+    display: flex;
+    align-items: center;
     border-bottom: none;
+    height: 100%;
+    padding: 0;
   }
   .header-menu {
     flex-direction: column;
     align-items: flex-end;
-    padding-top: 10px;
   }
   .header-menu--li {
     padding: 10px 20px;
@@ -194,9 +197,10 @@ main {
 
 .burger {
   position: fixed;
-  top: 25px;
+  top: 60px;
   right: 30px;
   z-index: 20;
+  display: none;
 }
 .burger-wrapper {
   position: relative;
@@ -207,9 +211,6 @@ main {
   width: 40px;
   height: 40px;
   box-sizing: border-box;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.3);
 }
 .burger-wrapper span {
   transition: transform 0.3s, width 0.3s, margin-bottom 0.3s ease;
@@ -218,6 +219,7 @@ main {
   height: 4px;
   border-radius: 4px;
   background-color: #070707;
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.3);
 }
 .burger-wrapper span:first-child {
   margin-bottom: 12px;
@@ -240,6 +242,11 @@ main {
 .burger-wrapper.active span:last-child {
   transform: rotate(-45deg);
   margin-top: -4px;
+}
+@media (max-width: 1020px) {
+  .burger {
+    display: block;
+  }
 }
 
 .mainscreen {
@@ -309,6 +316,25 @@ main {
     font-size: 1em;
   }
 }
+@media (max-width: 1020px) {
+  .mainscreen {
+    padding-top: 65px;
+  }
+  .mainscreen-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+  }
+  .mainscreen-info--language {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .mainscreen-photo img {
+    height: 100%;
+  }
+}
+
 .about {
   background-color: #F6F6F6;
   padding: 110px 0;
@@ -332,6 +358,14 @@ main {
 @media (max-width: 1444px) {
   .about-paragraph {
     font-size: 1em;
+  }
+}
+@media (max-width: 1020px) {
+  .about {
+    padding: 80px 0;
+  }
+  .about-wrapper {
+    max-width: 400px;
   }
 }
 
@@ -412,6 +446,31 @@ main {
     font-size: 0.78em;
   }
 }
+@media (max-width: 1020px) {
+  .skills-content {
+    margin: 0 -15px;
+  }
+  .skills-item {
+    width: 180px;
+    flex: 0 0 30%;
+  }
+  .skills-item--img {
+    height: 110px;
+  }
+  .skills-item--star {
+    height: 24px;
+  }
+}
+@media (max-width: 720px) {
+  .skills-item {
+    flex: 0 0 40%;
+  }
+}
+@media (max-width: 520px) {
+  .skills-item {
+    flex: 0 0 auto;
+  }
+}
 
 .portfolio {
   padding: 110px 0 90px;
@@ -452,12 +511,33 @@ main {
   text-decoration: underline;
   transition: all 0.3s ease;
 }
+.portfolio-link:not(:last-child) {
+  margin-bottom: 90px;
+}
 .portfolio-link:hover {
   opacity: 0.8;
 }
 @media (max-width: 1444px) {
   .portfolio-link {
     font-size: 1em;
+  }
+}
+@media (max-width: 1020px) {
+  .portfolio {
+    padding: 80px 0 80px;
+  }
+  .portfolio-img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 30px;
+  }
+  .portfolio-img img:hover {
+    width: 100%;
+    margin-left: 0;
+  }
+  .portfolio-link:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
 
@@ -529,5 +609,40 @@ main {
   }
   .footer-subtitle {
     font-size: 0.78em;
+  }
+}
+@media (max-width: 1020px) {
+  .footer {
+    padding: 80px 0;
+  }
+  .footer-title {
+    margin-bottom: 25px;
+  }
+  .footer-text {
+    margin-bottom: 30px;
+  }
+  .footer-btn {
+    max-width: 320px;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-bottom: 40px;
+  }
+  .footer-btn:hover {
+    margin: 0 0 40px;
+    box-shadow: none;
+  }
+  .footer-social {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 50px;
+  }
+  .footer-social--img {
+    width: 35px;
+  }
+}
+@media (max-width: 520px) {
+  .footer-social {
+    gap: 30px;
   }
 }

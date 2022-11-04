@@ -21,6 +21,9 @@ h1 {
     @media (max-width: 1444px) {
         font-size: 47px;
     }
+    @media (max-width: 720px) {
+        font-size: 34px;
+    }
 }
 
 h2 {
@@ -30,6 +33,7 @@ h2 {
     @media (max-width: 1444px) {
         font-size: 34px;
     }
+
 }
 
 // Main styles ========================
@@ -49,9 +53,8 @@ main {
     max-width: 65vw;
     margin: 0 auto;
     padding: 0 15px;
-    @media (max-width:1019px)  {
+    @media (max-width:1020px)  {
         max-width: 1000px;
-        padding: 0 30px;
     }
 }
 .wrapper {
@@ -104,19 +107,21 @@ main {
     @media (max-width: 1020px) {
         position: fixed;
         width: fit-content;
-        height: fit-content;
-        margin-top: 20px;
-        border: #070707 1px solid;
-        border-right: none;
-        border-radius: 20px 0 0 20px;
+        height: 100vh;
         z-index: 10;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: -15px 0 8px 8px rgba(255, 255, 255, 0.8);
         &-wrapper {
+            display: flex;
+            align-items: center;
             border-bottom: none;
+            height: 100%;
+            padding: 0;
         }
         &-menu {
+
             flex-direction: column;
             align-items: flex-end;
-            padding-top: 10px;
             &--li {
                 padding: 10px 20px;
             }
@@ -130,9 +135,10 @@ main {
 // Burger =============================
 .burger {
     position: fixed;
-    top: 25px;
+    top: 60px;
     right: 30px;
     z-index: 20;
+    display: none;
     &-wrapper {
         position: relative;
         display: flex;
@@ -142,9 +148,6 @@ main {
         width: 40px;
         height: 40px;
         box-sizing: border-box;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.3);
         
         & span {
             transition: transform .3s, width .3s, margin-bottom .3s ease;
@@ -153,6 +156,7 @@ main {
             height: 4px;
             border-radius: 4px;
             background-color: #070707;
+            box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.3);
             &:first-child {
                 margin-bottom: 12px;
             }
@@ -178,6 +182,9 @@ main {
                 }
             }
         }
+    }
+    @media (max-width:1020px) {
+        display: block;
     }
 }
 
@@ -252,8 +259,23 @@ main {
             font-size: 1em;
         }
     }
-    @media (max-width: 1250px) {
-        
+    @media (max-width: 1020px) {
+        padding-top: 65px;
+        &-info {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 0;
+            &--language {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 720px) {
+        &-photo {
+            & img {
+                height: 100%;
+            }
+        }
     }
 }
 
@@ -281,6 +303,12 @@ main {
     @media (max-width: 1444px) {
         &-paragraph{
             font-size: 1em;
+        }
+    }
+    @media (max-width: 1020px) {
+        padding: 80px 0;
+        &-wrapper {
+            max-width: 400px;
         }
     }
 }
@@ -363,6 +391,31 @@ main {
             font-size: 0.78em;
         }
     }
+    @media (max-width: 1020px) {
+        &-content {
+            margin: 0 -15px;
+        }
+        &-item {
+            width: 180px;
+            flex: 0 0 30%;
+            &--img {
+                height: 110px;
+            }
+            &--star {
+                height: 24px;
+            }
+        }
+    }
+    @media (max-width: 720px) {
+        &-item {
+            flex: 0 0 40%;
+        }
+    }
+    @media (max-width: 520px) {
+        &-item {
+            flex: 0 0 auto;
+        }
+    }
 }
 
 // Portfolio ==========================
@@ -403,6 +456,9 @@ main {
         line-height: 1.2em;
         text-decoration: underline;
         transition: all .3s ease;
+        &:not(:last-child) {
+            margin-bottom: 90px;
+        }
         &:hover {
             opacity: 0.8;
         }
@@ -410,6 +466,20 @@ main {
     @media (max-width: 1444px) {
         &-link{
             font-size: 1em;
+        }
+    }
+    @media (max-width: 1020px) {
+        padding: 80px 0 80px;
+        &-img {
+            height: fit-content;
+            margin-bottom: 30px;
+            & img:hover {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        &-link:not(:last-child) {
+            margin-bottom: 50px;
         }
     }
 }
@@ -484,6 +554,37 @@ main {
         }
         &-subtitle{
             font-size: 0.78em;
+        }
+    }
+    @media (max-width: 1020px) {
+        padding: 80px 0;
+        &-title {
+            margin-bottom: 25px;            
+        }
+        &-text {
+            margin-bottom: 30px;
+        }
+        &-btn {
+            max-width: 320px;
+            border-radius: 25px;
+            padding: 12px 20px;
+            margin-bottom: 40px;
+            &:hover {
+                margin: 0 0 40px;
+                box-shadow: none;
+            }
+        }
+        &-social {
+            height: fit-content;
+            gap: 50px;
+            &--img {
+                width: 35px;
+            }
+        }
+    }
+    @media (max-width: 520px) {
+        &-social {
+            gap: 30px;
         }
     }
 }
