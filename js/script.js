@@ -27,25 +27,13 @@ document.querySelector('.burger').addEventListener("click", function() {
 
 // Scroll listener ====================
 
-// const scrollPoints = document.querySelectorAll ('section');
-
-
-// scrollPoints.forEach(e => {
-//     console.log(e.getBoundingClientRect().y)
-// })
-
-
-// window.addEventListener('scroll', function() {
-//     console.log('scroll')
-// })
-const scrollPoints = document.querySelectorAll('section');
-// const pointsPosition = scrollPoints.getBoundingClientRect().top;
-// document.addEventListener('scroll', function() {
-//     // const pointsPosition = scrollPoints.getBoundingClientRect();
-//     console.log(scrollPoints)
-// })
-// console.log(pointsPosition);
-
-let height = [];
-height = scrollPoints.forEach.getBoundingClientRect().top;
-console.log(height)
+// Popup ==============================
+const popup = document.querySelector('.popup');
+document.querySelector('.footer-btn').addEventListener("click", function() {
+    popup.classList.add('active');
+});
+document.querySelectorAll('.close-field').forEach(e => {
+    e.addEventListener("click", function() {
+        popup.classList.remove('active');
+    });
+});
