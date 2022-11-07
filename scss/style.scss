@@ -196,12 +196,9 @@ main {
 .popup {
     position: relative;
     display: none;
-    padding-top: 25px;
     opacity: 0;
     &.active {
-        transition: opacity 3s ease;
-        display: block;
-        padding-top: 0;
+        display:block;
         opacity: 1;     
     }
     
