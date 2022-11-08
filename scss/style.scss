@@ -192,6 +192,26 @@ main {
     }
 }
 
+.alert {
+    display: none;
+    position: fixed;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #070707;
+    border-radius: 10px;
+    top: 30px;
+    left: calc(50% - 150px);
+    z-index: 40;
+    background-color: #fff;
+    &.alert-visible {
+        top: 20px;
+        display:block;
+    }
+    &-message {
+        font-size: 1em;
+    }
+}
+
 // Popup ==============================
 .popup {
     position: relative;

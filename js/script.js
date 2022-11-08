@@ -61,3 +61,17 @@ document.querySelectorAll('.close-field').forEach(e => {
         popup.classList.remove('active');
     });
 });
+
+
+// Still not working ==================
+const showAlert = function() {
+    const errMessage = document.querySelector('.alert');
+    errMessage.classList.add('alert-visible');
+    setTimeout(() => errMessage.classList.remove('alert-visible'), 3000)
+}
+
+document.querySelectorAll('.later').forEach(e => {
+    e.addEventListener("click", function() {
+        showAlert();
+    })
+})
