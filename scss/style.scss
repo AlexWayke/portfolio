@@ -87,7 +87,7 @@ main {
             line-height: 1.5em;
             color: #828282;
             opacity: 1;
-            transition: opacity .3s ease;
+            transition: opacity .3s, color .3s ease;
             cursor: pointer;
             &:hover {
                 opacity: 0.8;

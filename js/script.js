@@ -25,7 +25,31 @@ document.querySelector('.burger').addEventListener("click", function() {
     burgerBody.classList.toggle("header-hide");
 });
 
-// Scroll listener ====================
+// Navigation observer ================
+const changeNav = (entries, observer) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+            document.querySelector('.active').classList.remove('active');
+
+            let id = entry.target.getAttribute('id');
+
+            document.querySelector(`[href="#${id}"]`).parentElement.classList.add('active');
+        }
+    });
+}
+
+const options = {
+    threshold: 0.55
+}
+
+const observer = new IntersectionObserver(changeNav, options);
+
+const sections = document.querySelectorAll('.section');
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+
 
 // Popup ==============================
 const popup = document.querySelector('.popup');

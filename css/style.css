@@ -149,7 +149,7 @@ main {
   line-height: 1.5em;
   color: #828282;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s, color 0.3s ease;
   cursor: pointer;
 }
 .header-menu--li:hover {
